@@ -1,5 +1,5 @@
 ---
-title: "Lab 03 – Critical Use of GenAI for Data Science"
+title: "Lab 03 – Critical-Responsible Use of GenAI for Data Science"
 author: "Team Name: User1, User2, User3, User4"
 date: "`r Sys.Date()`"
 output: html_document
@@ -60,7 +60,8 @@ _Use this space to summarize what you attempted, either from your own exploratio
 
 ## 1.3 Reflection
 
-Did the GenAI explanation (if used) help you? What was clear or unclear from the GenAI explanation? Did it make any errors or skip anything important? Did you have to fact-check? Did you need to provide follow-up prompts or clarifications? Was the first response sufficient?
+Did the GenAI explanation (if used) help you? Which language model you explored? 
+What was clear or unclear? Did it make any errors or skip anything important? Did you fact-check? Did you need to provide follow-up prompts or clarifications, or was the first response sufficient?
 
 _Your answer here_
 
@@ -112,7 +113,8 @@ _Your answer here_
 
 ## 2.1 Reflection
 
-Was GenAI helpful as a navigator? Did it ask you questions to guide your thinking? Is there anything you could learn from this to be a better navigator, next time we will work in pairs?
+Was GenAI helpful as a navigator? Did it ask you questions to guide your thinking?
+Is there anything you could learn from this to be a better navigator, next time we will work in pairs?
 
 _Your answer here_
 
@@ -221,21 +223,27 @@ _Your answer here_
 
 # 5. GenAI Use Reflection
 
-- Discuss with your teammates, what are the risks of using GenAI for coding? 
-- More specifically, what are the risks of copying code verbatim?
+- Discuss with your teammates, what are the risks of using GenAI for coding? Did you use any LLM directly or you get help from IDS-sidekick ?
+- What are the risks of copying code verbatim without attempting?
 - Discuss the differences for someone who is just learning to code (like you) versus someone who is already proficient.
-- What are your thoughts on using GenAI as a *thinking partner* or *pair-programming navigator*, rather than a code-generator?
+- What are your thoughts on attempting a task on your own first, and then asking GenAI for help or feedback?
+- What are your thoughts on using GenAI as a *thinking partner* or *pair-programming navigator*, rather than a code-generator? Do you think IDS-sidekick is a good design based on your exploration so far? 
 - What is one insight or tip each of you learned today about using GenAI productively or spotting misleading AI-generated code?
 
 _Your answer here_
 
 ---
 
+Go to Learn and share your experience with us from that workshop, this information will be very useful for further iteration of IDS and use of GenAI within that module. 
+Under Course information -> [Week4 WS GenAI Reflections](https://www.learn.ed.ac.uk/ultra/courses/_136348_1/assessment/survey/_13043810_1?gradeitemView=details)
+
 # 6. GenAI Acknowledgment
 
 _If you used AI for this lab, provide a statement like (make sure to specify which GenAI tool you used):_
 
-> I used ELM/ChatGPT/Copilot to ....
+> I used ELM with IDS-sidekick ....
+or
+> I used ChatGPT/Copilot/Claude to ....
 
 ---
 
