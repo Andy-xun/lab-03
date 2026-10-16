@@ -41,21 +41,21 @@ summary(jan_feb_flights)
 ```{r}
 # which columns are integer
 
-# year, month, day, dep_time, sched_dep_time,arr_time, sched_arr_time, flight
+##year, month, day, dep_time, sched_dep_time,arr_time, sched_arr_time, flight
 
 # which columns are double
 
-# dep_delay, arr_delay, air_time, distance, hour, minute
+##dep_delay, arr_delay, air_time, distance, hour, minute
 
 # which columns are character
 
-# carrier, tailnum, origin, dest
+##carrier, tailnum, origin, dest
 ```
 
 ```{r}
 # which columns contain NA's
 
-# dep_time, dep_delay, arr_time, arr_delay, tailnum, air_time
+##dep_time, dep_delay, arr_time, arr_delay, tailnum, air_time
 
 ```
 
@@ -140,17 +140,21 @@ jfk_flights <- jan_feb_flights %>%
 ## REMEMBER TO SET eval=TRUE
 
 # Compute the sample mean
-mean_dep_delay <- jfk_flights %>% ________(mean_jfk = mean(dep_delay)) %>% pull(mean_jfk)
+mean_dep_delay <- jfk_flights %>% summarise(mean_jfk = mean(dep_delay)) %>% pull(mean_jfk)
 
 # Construct bootstrap distribution
 set.seed(99)  # for reproducibility
 boot_dist <- jfk_flights %>%
-  ________(response = _________) %>%
-  ________(reps = 1500, type = "bootstrap") %>%
-  ________(stat = _______)                 
+ specify(response = dep_delay) %>%
+ generate(reps = 1500, type = "bootstrap") %>%
+  calculate(stat = "mean")                 
 
 # Compute 95% confidence interval (percentile method)
-boot_dist %>% ...
+percentile_ci <- boot_dist %>%
+  get_confidence_interval(level = 0.95, type = "percentile")
+
+# 查看计算出来的置信区间
+print(percentile_ci)
 
 ```
 
@@ -189,6 +193,7 @@ What was good and what was bad of GenAI's explanation? Did you have to clarify o
 Did it match the information provided by the tutor?
 
 _Your answer here_
+
 
 ---
 
