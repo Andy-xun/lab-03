@@ -34,7 +34,8 @@ Are there missing values?
 
 ```{r}
 # explore the types of the columns in jan_feb_flights
-
+str(jan_feb_flights)
+summary(jan_feb_flights)
 ```
 
 ```{r}
