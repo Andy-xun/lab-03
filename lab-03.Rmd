@@ -41,17 +41,21 @@ summary(jan_feb_flights)
 ```{r}
 # which columns are integer
 
+# year, month, day, dep_time, sched_dep_time,arr_time, sched_arr_time, flight
 
 # which columns are double
 
+# dep_delay, arr_delay, air_time, distance, hour, minute
 
 # which columns are character
 
-
+# carrier, tailnum, origin, dest
 ```
 
 ```{r}
 # which columns contain NA's
+
+# dep_time, dep_delay, arr_time, arr_delay, tailnum, air_time
 
 ```
 
@@ -65,7 +69,7 @@ Did the GenAI explanation (if used) help you? Which language model you explored?
 What was clear or unclear? Did it make any errors or skip anything important? Did you fact-check? Did you need to provide follow-up prompts or clarifications, or was the first response sufficient?
 
 _Your answer here_
-
+I don't know, didn't use it
 ---
 
 # 2. Delays & Weather
