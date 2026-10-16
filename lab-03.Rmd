@@ -83,11 +83,14 @@ I don't know, didn't use it
 
 # join the datasets
 jan_feb_flights <- jan_feb_flights %>%
-  ____________(weather, by = c(______________________)) 
+  left_join(weather,by = c("origin","year","month","day","hour"))
 ```
 
 ```{r}
 # is there a difference in wind speed when wind_gust is missing vs not missing?
+jan_feb_flights %>%
+  group_by(gust_missing = is.na(wind_gust)) %>%
+  summarise(mean_wind_speed = mean(wind_speed, na.rm = TRUE))
 
 
 
@@ -95,33 +98,38 @@ jan_feb_flights <- jan_feb_flights %>%
 
 Describe the difference in wind speed when wind_gust is missing vs not missing:
 
-_Your answer here_
+"Yes, the average wind speed is higher when wind_gust is not missing than when it is missing."
 
 ```{r eval=FALSE} 
 ## REMEMBER TO SET eval=TRUE
 
 # create a new variable, gust_present
 jan_feb_flights <- jan_feb_flights %>%
-  mutate(gust_present = _______________)
+  mutate(gust_present = !is.na(wind_gust))
 ```
 
 
 ```{r}
 # is there a relationship between gust_present and dep_delay?
-
+jan_feb_flights %>%
+  group_by(gust_present) %>%
+  summarise(
+    mean_delay = mean(dep_delay, na.rm = TRUE),
+    sd_delay = sd(dep_delay, na.rm = TRUE)
+  )
 
 ```
 
 Describe the relationship between gust_present and dep_delay you see (if any).
 
-_Your answer here_
+"Flights with recorded wind gusts have a higher average departure delay than those without. The standard deviations are similar. This suggests an association."
 
 ## 2.1 Reflection
 
 Was GenAI helpful as a navigator? Did it ask you questions to guide your thinking?
 Is there anything you could learn from this to be a better navigator, next time we will work in pairs?
 
-_Your answer here_
+"Yes,it's helpful in guiding you to answer these questions and it offered variable ways like asking you questions to help you learn while typing these codes."
 
 ---
 
