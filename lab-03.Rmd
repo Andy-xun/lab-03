@@ -169,6 +169,7 @@ print(percentile_ci)
 **Interpretation for the confidence interval**:
 
 _Your answer here_
+We are 95% confident that the true population mean departure delay for flights departing from JFK (in January and February) is between 9.57 and 10.6 minutes.
 
 ## 3.2 Using base R
 
@@ -201,7 +202,12 @@ What was good and what was bad of GenAI's explanation? Did you have to clarify o
 Did it match the information provided by the tutor?
 
 _Your answer here_
+I find AI does a great job at explaining the big picture, such as the structure of for loops. However, it tends to skip over certain small details, assuming you already understand them.
+For example, in this line of code:
+`boot_means2[i] <- mean(jfk_flights$dep_delay[idx])`
+It does not explain why `[idx]` can be used directly, or what the `[i]` means in the variable `boot_means2[i]`. I need to ask follow-up questions about these points.
 
+In other words, if you do not pay attention to these fine details, AI can give you the illusion that you understand the code, when in fact you do not.
 
 ---
 
